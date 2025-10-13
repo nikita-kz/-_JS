@@ -71,5 +71,3 @@ function writeYourGenres() {
 writeYourGenres();
 
 console.log(personalMovieDB.movies);
-
-/*А если не подошло ни к одному варианту - "Произошла ошибка" (надо добавить это условие)*/
