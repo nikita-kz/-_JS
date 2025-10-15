@@ -1,13 +1,17 @@
 "use strict"
 
 
-const numberOfFilms = prompt("Сколько фильмов вы уже посмотрели?", "");
-
+let numberOfFilms;
+while (numberOfFilms == "" || numberOfFilms == null || isNaN(numberOfFilms)) {
+    numberOfFilms = prompt("Сколько фильмов вы уже посмотрели?", "");
+}
 console.log(numberOfFilms);
 
 const personalMovieDB = {
     count:numberOfFilms,
-    movies: {},
+    movie: {
+        movies: {}
+    },
     actors: {},
     genners: [],
     private: false
@@ -30,7 +34,7 @@ for (let i = 0;i < 2; i++) {
           
           
           if (a != null && b != null && a != '' && b != '' && a.length < 50){
-            personalMovieDB.movies[a]=b;
+            personalMovieDB.movie.movies[a]=b;
             console.log("Gotovo");
           }
           else {
@@ -40,4 +44,4 @@ for (let i = 0;i < 2; i++) {
 
 };
 
-console.log(personalMovieDB.movies);
+console.log(personalMovieDB.movie.movies);
