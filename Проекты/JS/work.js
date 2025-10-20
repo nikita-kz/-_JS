@@ -158,9 +158,9 @@
 
 // console.log(sum);
 
-const Oldarray = ['1', '4', '7', '10', '2', '4'];
-const NewArray = Oldarray.slice(-3);
-console.log(NewArray);
+// const Oldarray = ['1', '4', '7', '10', '2', '4'];
+// const NewArray = Oldarray.slice(-3);
+// console.log(NewArray);
 
 // Используя slice, создаём newCar из myCar.
 // var myHonda = {
@@ -185,3 +185,14 @@ console.log(NewArray);
 // // Отображаем цвет myHonda по ссылкам из обоих массивов.
 // console.log("myCar[0].color = " + myCar[0].color);
 // console.log("newCar[0].color = " + newCar[0].color);
+
+function Dog () {
+// this привязывается к новому объекту
+  this.name = 'Cheems'
+}
+
+// создаём новый объект Dog
+const firstDog = new Dog();
+
+
+console.log(firstDog.name);
