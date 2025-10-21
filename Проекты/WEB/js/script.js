@@ -25,32 +25,32 @@ const movieDB = {
     ]
 };
 
-const Reklama = document.querySelectorAll('.promo__adv img'), // (1)
+const reklama = document.querySelectorAll('.promo__adv img'),
       poster = document.querySelector('.promo__bg'),
-      genre = poster.querySelector('.promo__genre'), // (2)
+      genre = poster.querySelector('.promo__genre'),
       films = document.querySelector('.promo__interactive-list');
+      
 
-Reklama.forEach(item => {  // (1)
+// 1-пункт (удалить рекламу)
+reklama.forEach((item) => {
     item.remove();
 });
-genre.textContent = 'Драма'; // (2)
-poster.style.backgroundImage = 'url("img/bg.jpg")'; // (3)
+
+// 2-пункт (изменить жанр)
+genre.textContent = 'Драма';
+
+// 3-пункт (заменить задний фон)
+poster.style.backgroundImage = 'url("img/bg.jpg")';
+
 
 films.innerHTML = "";
 movieDB.movies.sort();
 
-movieDB.movies.forEach((film, i) => {
-    films.innerHTML += `<li class="promo__interactive-item">${ i+1} ${film}
+movieDB.movies.forEach((item, i) =>{
+    films.innerHTML += `<li class="promo__interactive-item">${i+1}. ${item} 
                             <div class="delete"></div>
                         </li>`
 });
-
-
-
-// console.log(poster);
-//console.log(Reklama);
-// console.log(BgElements);
-// console.log(genre);
 
 
 
