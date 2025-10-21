@@ -88,11 +88,9 @@
 const box = document.getElementById('box'),
       btns = document.getElementsByTagName('button'),
       circles = document.getElementsByName('circle'),
-      hearts = document.querySelectorAll('heart'),
+      hearts = document.querySelectorAll('.heart'),
       oneHeart = document.querySelector('.heart');
 
 
-const div = document.createElement('div');
-div.classList.add('black');
-document.body.append(div);
-//console.log(div);
+
+console.log(hearts);
